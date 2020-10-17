@@ -22,5 +22,9 @@ def chat():
 def dontC():
     return render_template('dontcare.html')
 
+@app.route('/chattingP')
+def chattingP():
+    return render_template('chattingP.html')
+
 app.run(host='0.0.0.0', port=80, debug=True)
 
