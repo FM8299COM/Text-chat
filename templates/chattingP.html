@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -38,54 +39,55 @@
         </div>
       </nav>
       {% block saturs %} 
-      <div class="container-fluid">
+      <div class="container-fluid align-self-center">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 well">
             <a class="btn btn-info " href="#">Settings</a> 
             <h1 class="room-title text-center"></h1>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-              <div class="container-fluid bg-light" >
-                <style class="container-fluid bg-light">
-                  body{position: relative;list-style-type: none;height: 200px;border: 3px solid black;}
+            
+            <div class="alert alert-warning" role="alert">
+              You are loged in as: <input type="text" class="form-control" placeholder="Adam" aria-label="Username" aria-describedby="basic-addon1"> <a class="btn btn-warning " href="#">Change username</a>
+            </div>
+              <div id = "Textbox" class="container-fluid bg-light rounded-top" >
+                <style  class="container-fluid bg-light">
+                  .textbox{
+                    position: relative;
+                    list-style-type: none;
+                    height: 200px;
+                    border: 3px solid black;
+                  }
                 </style>
                 <ul class="messages list-group">
-                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
-                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
-                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
-                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
-                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
+                    <div class="container">
+                        <img src="three.jpg" alt="Avatar" style="width:100%;">
+                        <p>Hello. How are you today?</p>
+                        <span class="time-right">11:00</span>
+                      </div>
+                      <div class="container darker">
+                        <img src="One.png" alt="Avatar" class="right" style="width:100%;">
+                        <p>Hey! I'm fine. Thanks for asking!</p>
+                        <span class="time-left">11:01</span>
+                      </div>
+                      <div class="container">
+                        <img src="three.jpg" alt="Avatar" style="width:100%;">
+                        <p>Sweet! So, what do you wanna do today?</p>
+                        <span class="time-right">11:02</span>
+                      </div>
+                      <div class="container darker">
+                        <img src="One.png" alt="Avatar" class="right" style="width:100%;">
+                        <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                        <span class="time-left">11:05</span>
+                      </div>
+                  <p> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</p>
                 </ul>
             </div>
-            <form id="messageForm">
-              <div class="form-group">
-                <i class="" id="icon-type"></i>
-                <p class="help-block typing"></p>
-                <div class="input-group">
-                  <span class="input-group-addon">
-                    <i class="glyphicon glyphicon-comment"></i>
-                  </span>
-                  <input autofocus class="form-control" id="messagebox" name="message" type="text" value=""/>
-                </div>
-              </div>
-  
-              <div class="form-group container-fluid centered">
-                <input class="btn btn-warning btn-block" type="submit"/>
-              </div>
-  
-            </form>
-  
-          </div>
-  
-        </div>
-  
-      </div>
+              <nav class="navbar navbar-light bg-light rounded-bottom">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </nav>
 
       </div>
 </body>
-<footer>
-  <style>
-    body{position: relative;list-style-type: none;height: 200px;border: 3px solid black;}
-  </style>
-</footer>
 </html>
       {% endblock %}
