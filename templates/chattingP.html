@@ -37,10 +37,55 @@
           </ul>
         </div>
       </nav>
-      {% block saturs %}   
-      <div id="chat-container">
+      {% block saturs %} 
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 well">
+            <a class="btn btn-info " href="#">Settings</a> 
+            <h1 class="room-title text-center"></h1>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              <div class="container-fluid bg-light" >
+                <style class="container-fluid bg-light">
+                  body{position: relative;list-style-type: none;height: 200px;border: 3px solid black;}
+                </style>
+                <ul class="messages list-group">
+                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
+                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
+                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
+                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
+                  <li> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</li>
+                </ul>
+            </div>
+            <form id="messageForm">
+              <div class="form-group">
+                <i class="" id="icon-type"></i>
+                <p class="help-block typing"></p>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-comment"></i>
+                  </span>
+                  <input autofocus class="form-control" id="messagebox" name="message" type="text" value=""/>
+                </div>
+              </div>
+  
+              <div class="form-group container-fluid centered">
+                <input class="btn btn-warning btn-block" type="submit"/>
+              </div>
+  
+            </form>
+  
+          </div>
+  
+        </div>
+  
+      </div>
 
       </div>
 </body>
+<footer>
+  <style>
+    body{position: relative;list-style-type: none;height: 200px;border: 3px solid black;}
+  </style>
+</footer>
 </html>
       {% endblock %}
