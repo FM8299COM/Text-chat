@@ -9,13 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript" src="static/js/global.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/css/stylesheet.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <title>Text chat</title>
+    <style>
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
@@ -41,165 +43,133 @@
         </div>
       </nav>
       {% block saturs %} 
-      <div id="wrapper">
-      <div  id = "div2" class="container-fluid align-self-center">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3 well">
-            <a class="btn btn-info " href="#">Settings</a> 
-            <h1 class="room-title text-center"></h1>
-            
-            <div class="alert alert-warning" role="alert">
-              You are loged in as: <input type="text" class="form-control" placeholder="Adam" aria-label="Username" aria-describedby="basic-addon1"> <a class="btn btn-warning " href="#">Change username</a>
-            </div>
-              <div id = "Textbox" class="container-fluid bg-light rounded-top" >
-                <style  class="container-fluid bg-light">
-                  .textbox{
-                    position: relative;
-                    list-style-type: none;
-                    height: 200px;
-                    border: 3px solid black;
-                  }
-                </style>
-                <ul class="messages list-group">
-                    <div class="container">
-                        <img src="three.jpg" alt="Avatar" style="width:100%;">
-                        <p>Hello. How are you today?</p>
-                        <span class="time-right">11:00</span>
-                      </div>
-                      <div class="container darker">
-                        <img src="One.png" alt="Avatar" class="right" style="width:100%;">
-                        <p>Hey! I'm fine. Thanks for asking!</p>
-                        <span class="time-left">11:01</span>
-                      </div>
-                      <div class="container">
-                        <img src="three.jpg" alt="Avatar" style="width:100%;">
-                        <p>Sweet! So, what do you wanna do today?</p>
-                        <span class="time-right">11:02</span>
-                      </div>
-                      <div class="container darker">
-                        <img src="One.png" alt="Avatar" class="right" style="width:100%;">
-                        <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                        <span class="time-left">11:05</span>
-                      </div>
-                  <p> Adam: AAAAAAAAAAAAAA AAAAAAAAAAAAAA</p>
-                  <p id="TextIn"></p>
-                  <nav class="navbar navbar-light bg-light rounded-bottom">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" placeholder="Message" type="text" id="TextShow" oninput="Func()">
-                      <button class="btn btn-success my-2 my-sm-0" type="submit">Send it</button>
-                  </nav>
-                </ul>
-            </div>
-              <div id ="div1" id="container">
-                <aside>
-                    <header>
-                        <input type="text" placeholder="search">
-                    </header>
+        <div class="container bg-secondary nt-5 p-5" style="margin-top: 70px;">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 well">
+                  <a class="btn btn-info " href="#">Settings</a> 
+                  <h1 class="room-title text-center"></h1>
+                  
+                  <div class="alert alert-secondary" role="alert">
+                    You are loged in as: <input type="text" class="form-control" placeholder="Adam" aria-label="Username" aria-describedby="basic-addon1"> <a class="btn btn-warning " href="#" style="margin-top: 10px;">Change username</a>
+                  </div>
+                  <div id = "Textbox" class="container-fluid bg-light rounded-top" >
+                    <style  class="container-fluid bg-light">
+                      .textbox{
+                        position: relative;
+                        list-style-type: none;
+                        height: 200px;
+                        border: 3px solid black;
+                      }
+                    </style>
+                    <ul class="messages list-group">
+                        <div class="container">
+                            <h7>Adam </h7>
+                            <p>Hello. How are you today?</p>
+                            <span class="time-right">11:00</span>
+                          </div>
+                          <div class="container darker">
+                            <h7>Adam </h7>
+                            <p>Hey! I'm fine. Thanks for asking!</p>
+                            <span class="time-left">11:01</span>
+                          </div>
+                          <div class="container">
+                            <h7>Adam </h7>
+                            <p>Sweet! So, what do you wanna do today?</p>
+                            <span class="time-right">11:02</span>
+                          </div>
+                          <div class="container darker">
+                            <h7>Adam </h7>
+                            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                            <span class="time-left">11:05</span>
+                          </div>
+                          <div class="container darker">
+                            <h7>Adam </h7>
+                            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                            <span class="time-left">11:05</span>
+                          </div>
+                          <div class="container darker">
+                            <h7>Adam </h7>
+                            <p id="TextIn"></p>
+                            <span class="time-left">11:05</span>
+                          </div>
+                      <nav class="navbar navbar-light bg-light rounded-bottom">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" placeholder="Message" type="text" id="TextShow" oninput="Func()">
+                          <button class="btn btn-warning my-2 my-sm-0" type="submit">Send it</button>
+                      </nav>
+                    </ul>
+                </div>
+        </div>
+        <div class="col-md-6 " style="margin-top: 50px;">
+            <div class="container-fluid border-dark">
+                <h3>People online</h3>
+                <div class="alert alert-secondary" role="alert">
+                    <button type="button" class="btn btn-warning">Friends</button>
                     <ul>
                         <li>
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="" height="50px" weight="50px">
                             <div>
-                                <h2>Adam G</h2>
-                                <h3>
+                                <h5>Adam G</h5>
+                                <h6>
                                     <span class="status orange"></span>
-                                    offline
-                                </h3>
+                                    online
+                                </h6>
                             </div>
                         </li>
                         <li>
                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg" alt="">
                             <div>
-                                <h2>Adam G</h2>
-                                <h3>
+                                <h5>Adam G</h5>
+                                <h6>
                                     <span class="status green"></span>
                                     online
-                                </h3>
+                                </h6>
                             </div>
                         </li>
                         <li>
                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_03.jpg" alt="">
                             <div>
-                                <h2>Adam G</h2>
-                                <h3>
+                                <h5>Adam G</h5>
+                                <h6>
                                     <span class="status orange"></span>
-                                    offline
-                                </h3>
+                                    online
+                                </h6>
                             </div>
                         </li>
                         <li>
                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_04.jpg" alt="">
                             <div>
-                                <h2>Adam G</h2>
-                                <h3>
+                                <h5>Adam G</h5>
+                                <h6>
                                     <span class="status green"></span>
                                     online
-                                </h3>
+                                </h6>
                             </div>
                         </li>
                         <li>
                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_05.jpg" alt="">
                             <div>
-                                <h2>Adam G</h2>
-                                <h3>
+                                <h5>Adam G</h5>
+                                <h6>
                                     <span class="status orange"></span>
-                                    offline
-                                </h3>
+                                    online
+                                </h6>
                             </div>
                         </li>
                         <li>
                             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_06.jpg" alt="">
                             <div>
-                                <h2>Adam G</h2>
-                                <h3>
+                                <h5>Adam G</h5>
+                                <h6>
                                     <span class="status green"></span>
                                     online
-                                </h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_07.jpg" alt="">
-                            <div>
-                                <h2>Adam G</h2>
-                                <h3>
-                                    <span class="status green"></span>
-                                    online
-                                </h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg" alt="">
-                            <div>
-                                <h2>Adam G</h2>
-                                <h3>
-                                    <span class="status green"></span>
-                                    online
-                                </h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_09.jpg" alt="">
-                            <div>
-                                <h2>Adam G</h2>
-                                <h3>
-                                    <span class="status green"></span>
-                                    online
-                                </h3>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_10.jpg" alt="">
-                            <div>
-                                <h2>Adam G</h2>
-                                <h3>
-                                    <span class="status orange"></span>
-                                    offline
-                                </h3>
+                                </h6>
                             </div>
                         </li>
                     </ul>
-                </aside>
-            </div>
-    </div>
+                    <p></p>
+              </div>
+        </div>
 </div>
 </body>
 </html>
