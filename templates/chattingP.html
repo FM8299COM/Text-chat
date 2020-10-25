@@ -8,7 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="static/js/global.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="ChuckNorris.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
@@ -52,8 +53,8 @@
                   <div class="alert alert-secondary" role="alert">
                     You are loged in as: <input type="text" class="form-control" placeholder="Adam" aria-label="Username" aria-describedby="basic-addon1"> <a class="btn btn-warning " href="#" style="margin-top: 10px;">Change username</a>
                   </div>
-                  <div id = "Textbox" class="container-fluid bg-light rounded-top" >
-                    <style  class="container-fluid bg-secondary">
+                  <div class="container-fluid bg-light rounded-top"  >
+                    <style id = "Textbox"  class="container-fluid bg-secondary">
                       .textbox{
                         position: relative;
                         list-style-type: none;
@@ -61,46 +62,32 @@
                         border: 3px solid black;
                       }
                     </style>
-                    <ul class="messages list-group">
-                        <div class="container">
-                            <h7>Adam </h7>
-                            <p>Hello. How are you today?</p>
-                            <span class="time-right">11:00</span>
-                          </div>
-                          <div class="container darker">
-                            <h7>Adam </h7>
-                            <p>Hey! I'm fine. Thanks for asking!</p>
-                            <span class="time-left">11:01</span>
-                          </div>
-                          <div class="container">
-                            <h7>Adam </h7>
-                            <p>Sweet! So, what do you wanna do today?</p>
-                            <span class="time-right">11:02</span>
-                          </div>
-                          <div class="container darker">
-                            <h7>Adam </h7>
-                            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                            <span class="time-left">11:05</span>
-                          </div>
-                          <div class="container darker">
-                            <h7>Adam </h7>
-                            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-                            <span class="time-left">11:05</span>
-                          </div>
-                          <div class="container darker">
-                            <h7>Adam </h7>
-                            <p id="TextIn"></p>
-                            <span class="time-left">11:05</span>
-                          </div>
-                      <nav class="navbar navbar-light bg-light rounded-bottom">
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" placeholder="Message" type="text" id="TextShow" oninput="Func()">
-                          <button class="btn btn-warning my-2 my-sm-0" type="submit">Send it</button>
-                      </nav>
-                    </ul>
+                    <ul class="messages list-group"  id="messages"></ul>
+                    <div style="overflow: hidden;" class="container">
+                      <p style="float: left;">Labdien</p>
+                    </div>
+                    <div style="overflow: hidden;" class="container">
+                      <p style="float: left;">Labdien!</p>
+                    </div>
+                    <div style="overflow: hidden;" class="container">
+                      <p style="float: left;" id="MESSAGE"></p>
+                    </div>
+                      <form class="form-inline">
+                        <input class="form-control mr-sm-2" placeholder="Message" type="text" id="TEXTIN">
+                        <button class="btn btn-warning my-2 my-sm-0" type="submit" id="button">Send it</button>
+                </div>
+                <div class="container-fluid bg-light" style="margin-top: 15px;">
+                  <div class="container">,
+                    <h1>Best jokes</h1>
+                    <blockquote class="blockquote text-right">
+                        <p class="mb-0" id='joke'></p>
+                        <footer class="blockquote-footer">Famous <cite title="Source Title">Chuck Norris</cite></footer>
+                    </blockquote>
+                    <button type="button" class="btn btn-secondary" id='getJoke'>Get joke</button>
+                </div>
                 </div>
         </div>
-        <div class="col-md-6 " style="margin-top: 50px;">
+        <div class="col-md-4 " style="margin-top: 50px;">
             <div class="container-fluid border-dark">
                 <h3>People online</h3>
                 <div class="alert alert-secondary" role="alert">

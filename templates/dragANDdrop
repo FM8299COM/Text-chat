@@ -260,3 +260,81 @@
                 </aside>
             </div>
     </div>
+
+
+
+
+
+
+
+    function Func(){
+    var kvk = document.getElementById("TextIn").value
+    console.log("kvk")
+    document.getElementById("TextShow").innerHTML = kvk
+}
+
+
+
+
+
+
+<div class="container">
+                            <h7>Adam </h7>
+                            <p>Hello. How are you today?</p>
+                            <span class="time-right">11:00</span>
+                          </div>
+                          <div class="container darker">
+                            <h7>Adam </h7>
+                            <p>Hey! I'm fine. Thanks for asking!</p>
+                            <span class="time-left">11:01</span>
+                          </div>
+                          <div class="container">
+                            <h7>Adam </h7>
+                            <p>Sweet! So, what do you wanna do today?</p>
+                            <span class="time-right">11:02</span>
+                          </div>
+                          <div class="container darker">
+                            <h7>Adam </h7>
+                            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                            <span class="time-left">11:05</span>
+                          </div>
+                          <div class="container darker">
+                            <h7>Adam </h7>
+                            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                            <span class="time-left">11:05</span>
+                          </div>
+                          <div class="container darker">
+                            <h7>Adam </h7>
+                            <p id="TextIn"></p>
+                            <span class="time-left">11:05</span>
+                          </div>
+
+
+
+
+var messages = document.getElementById("messages");
+var textbox = document.getElementById("TextShow");
+var btn = document.getElementById("button");
+
+btn.addEventListener("click",function(){
+    var NewMessage = document.createElement("li");
+    NewMessage.innerHTML = textbox.value
+    messages.appendChild(NewMessage);
+    textbox.value = "";
+
+});
+
+
+
+
+
+
+<div style="overflow: hidden;" class="container">
+                      <p style="float: left;">Labdien</p>
+                    </div>
+                    <div style="overflow: hidden;" class="container">
+                      <p style="float: left;">Labdien!</p>
+                    </div>
+                    <div style="overflow: hidden;" class="container">
+                      <p style="float: left;" id="mes"></p>
+                    </div>
